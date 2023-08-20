@@ -27,9 +27,9 @@ int print_int_i(va_list arguments)
 	while (num_digit > 0)
 	{
 		_putchar((num_man / num_digit) + 48);
-		len++;
 		num_man = num_man % num_digit;
 		num_digit /= 10;
+		len++;
 	}
 	return (len);
 }
