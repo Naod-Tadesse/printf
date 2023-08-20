@@ -17,8 +17,8 @@ int print_int_d(va_list arguments)
 		for (j = 0; j < 11; j++)
 		{
 			_putchar(min_int[j]);
-			len = 11;
 		}
+		len = 11;
 	}
 	else
 	{
