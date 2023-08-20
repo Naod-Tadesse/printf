@@ -11,15 +11,14 @@ int print_int_i(va_list arguments)
 	int num = va_arg(arguments, int);
 	int len = 0, num_digit = 1, num_man;
 
-	if (num >= 0)
+	if (num < 0)
 	{
-		num_man = num;
+		len += _putchar('-');
+		num_man = -num;
 	}
 	else
 	{
-		_putchar('-');
-		len++;
-		num_man = -num;
+		num_man = num;
 	}
 	while (num_man / num_digit >= 10)
 	{
