@@ -11,7 +11,7 @@ int _printf(const char * const format, ...)
 {
 	conversion map[] = {
 		{"%s", print_string}, {"%c", print_char}, {"%%", print_37},
-		{"%i", print_int_i}, {"%d", print_int_i}
+		{"%i", print_int_i}, {"%d", print_int_d}
 	};
 
 	int i = 0, len = 0;

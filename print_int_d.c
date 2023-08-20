@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_int_i - prints integer using %i format specifier
+ * print_int_d - prints integer using %i format specifier
  * @arguments: list of numbers to be printed
  * Return: the number of digits
  */
 
-int print_int_i(va_list arguments)
+int print_int_d(va_list arguments)
 {
 	int num = va_arg(arguments, int);
 	int len = 0, num_digit = 1, num_man;
