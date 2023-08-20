@@ -24,6 +24,7 @@ int _strlen(char *str);
 int print_char(va_list value);
 int print_string(va_list s);
 int print_37(void);
+int print_int_i(va_list arguments);
 int _printf(const char *format, ...);
 
 #endif
