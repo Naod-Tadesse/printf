@@ -2,7 +2,7 @@
 
 /**
  * print_37 - prints the character '%'
- * Return: 1 Always
+ * Return: 1 Always since it is one character
  */
 
 int print_37(void)
