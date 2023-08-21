@@ -30,6 +30,10 @@ int print_int_i(va_list arguments)
 		{
 			num_man = num;
 		}
+		while (num_man / num_digit >= 10)
+		{
+			num_digit = num_digit * 10;
+		}
 	}
 	return (len);
 }
