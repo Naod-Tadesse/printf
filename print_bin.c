@@ -12,11 +12,11 @@ int print_bin(va_list arguments)
 	int bin_Num[32];
 	int i = 0, j;
 	unsigned int num = va_arg(arguments, unsigned int);
-	
+
 	if (num == 0)
 	{
 		_putchar(0 + '0');
-		return(1);
+		return (1);
 	}
 	while (num > 0)
 	{
