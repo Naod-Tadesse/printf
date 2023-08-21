@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_int_i - prints integer using %i format specifier 
- * @arguments: list of numbers to be printed
- * Return: the number of digits
+ * print_int_i - prints integer with format specifier %i
+ * @arguments: integer to be printed to output
+ * Return: number of digits
  */
 int print_int_i(va_list arguments)
 {
