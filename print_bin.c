@@ -1,26 +1,5 @@
 #include "main.h"
 
-
-/**
- * bin_len - calculates the number of bits needed
- * @num: the number received
- * Return: the numbar of bit
- */
-
-int bin_len(unsigned int num)
-{
-	unsigned int temp = num;
-	int num_bits = 0;
-
-	while ( temp > 0)
-	{
-		num_bits++;
-		temp /= 2;
-	}
-	return (num_bits);
-}
-
-
 /**
  * print_bin - prints the binary representation of decimal
  * @arguments: the number received
@@ -30,18 +9,25 @@ int bin_len(unsigned int num)
 
 int print_bin(va_list arguments)
 {
-	unsigned int number = va_arg(arguments, unsigned int);
-	int no_bit = bin_len(number);
-	int binary_bits[no_bit], i;
+	int bin_Num[32];
+	int i = 0, j;
+	unsigned int num = va_arg(arguments, unsigned int);
+	
+	if (num == 0)
+	{
+		_putchar(0 + '0');
+		return(1);
+	}
+	while (num > 0)
+	{
+		bin_Num[i] = num % 2;
+		num = num / 2;
+		i++;
+	}
 
-	for (int i = no_bit - 1; i >= 0; i--)
+	for (j = i - 1; j >= 0; j--)
 	{
-		binary_bits[i] = number % 2;
-		number /=2;
+		_putchar(bin_Num[j] + '0');
 	}
-	for (int i = 0; i < no_bit; i++)
-	{
-		_putchar(binary_bits[i]+'0');
-	}
-	return (no_bit);
+	return (i);
 }

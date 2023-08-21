@@ -11,7 +11,7 @@ int _printf(const char * const format, ...)
 {
 	conversion map[] = {
 		{"%s", print_string}, {"%c", print_char}, {"%%", print_37},
-		{"%i", print_int_i}, {"%d", print_int_d}
+		{"%i", print_int_i}, {"%d", print_int_d}, {"%b", print_bin}
 	};
 
 	int i = 0, len = 0;
@@ -26,7 +26,7 @@ int _printf(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		j = 4;
+		j = 5;
 		while (j >= 0)
 		{
 			if (map[j].spec[0] == format[i] && map[j].spec[1] == format[i + 1])
