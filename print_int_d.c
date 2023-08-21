@@ -2,7 +2,7 @@
 
 /**
  * print_int_d - prints integer using %d format specifier
- * @arguments; list of numbers to be printed
+ * @arguments: list of numbers to be printed
  * Return: the number of digits
  */
 
@@ -15,7 +15,7 @@ int print_int_d(va_list arguments)
 
 	if (num == INT_MIN)
 	{
-		for(j = 0; j< 11; j++)
+		for (j = 0; j < 11; j++)
 		{
 			_putchar(min_int[j]);
 		}
