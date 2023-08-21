@@ -7,7 +7,18 @@
  * Return: the numbar of bit
  */
 
+int bin_len(unsigned int num)
+{
+	unsigned int temp = num;
+	int num_bits = 0;
 
+	while ( temp > 0)
+	{
+		num_bits++;
+		temp /= 2;
+	}
+	return (num_bits);
+}
 
 
 /**
