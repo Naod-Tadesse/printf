@@ -34,6 +34,13 @@ int print_int_i(va_list arguments)
 		{
 			num_digit = num_digit * 10;
 		}
+		while (num_digit > 0)
+		{
+			_putchar((num_man / num_digit) + 48);
+			num_man = num_man % num_digit;
+			num_digit /= 10;
+			len++;
+		}
 	}
 	return (len);
 }
