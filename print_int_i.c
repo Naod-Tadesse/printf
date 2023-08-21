@@ -26,6 +26,10 @@ int print_int_i(va_list arguments)
 			len += _putchar('-');
 			num_man = -num;
 		}
+		else
+		{
+			num_man = num;
+		}
 	}
 	return (len);
 }
