@@ -21,6 +21,11 @@ int print_int_i(va_list arguments)
 	}
 	else
 	{
+		if (num < 0)
+		{
+			len += _putchar('-');
+			num_man = -num;
+		}
 	}
 	return (len);
 }
