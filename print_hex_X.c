@@ -27,7 +27,7 @@ int hex_len(int n)
 int print_hex_X(va_list arguments)
 {
 	unsigned int number = va_arg(arguments, unsigned int);
-	int i = 0, t = 0, j, val, *hex, temp = number, len_temp = 1;
+	int i = 0, t = 0, j, val, *hex, temp = number;
 
 	if (number == 0)
 	{
@@ -62,5 +62,5 @@ int print_hex_X(va_list arguments)
 		_putchar(hex[j]);
 	}
 	free(hex);
-	return (len_temp);
+	return (val);
 }

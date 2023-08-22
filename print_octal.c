@@ -26,7 +26,7 @@ int print_octal(va_list arguments)
 
 	for (it = i - 1; it >= 0; it--)
 	{
-		_putchar(oNum[it] + 48);
+		_putchar(oNum[it] + '0');
 	}
 	return (i);
 }
