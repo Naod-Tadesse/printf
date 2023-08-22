@@ -47,5 +47,7 @@ int print_hex_x(va_list arguments)
 	{
 		_putchar(hex[j]);
 	}
+
+	free(hex);
 	return (len_temp);
 }
