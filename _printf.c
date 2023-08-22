@@ -11,7 +11,9 @@ int _printf(const char * const format, ...)
 {
 	conversion map[] = {
 		{"%s", print_string}, {"%c", print_char}, {"%%", print_37},
-		{"%i", print_int_i}, {"%d", print_int_d}, {"%b", print_bin}
+		{"%i", print_int_i}, {"%d", print_int_d}, {"%b", print_bin},
+		{"%u", print_unsigned_int}, {"%o", print_octal}, {"%x", print_hex_x},
+		{"%X", print_hex_X}
 	};
 
 	int i = 0, len = 0;
@@ -26,7 +28,7 @@ int _printf(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		j = 5;
+		j = 9;
 		while (j >= 0)
 		{
 			if (map[j].spec[0] == format[i] && map[j].spec[1] == format[i + 1])
