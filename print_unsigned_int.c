@@ -9,7 +9,7 @@
 int print_unsigned_int(va_list arguments)
 {
 	unsigned int number = va_arg(arguments, unsigned int);
-	int len = 0, digits = 1;
+	int len = 1, digits = 1;
 
 	while (number / digits >= 10)
 	{
