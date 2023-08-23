@@ -19,7 +19,7 @@ int print_unsigned_int(va_list arguments)
 
 	while (digits != 0)
 	{
-		len += _putchar((number / digits) + 48);
+		_putchar((number / digits) + 48);
 		number = number % digits;
 		digits /= 10;
 	}
